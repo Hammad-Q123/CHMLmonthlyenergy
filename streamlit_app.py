@@ -9,7 +9,7 @@ st.set_page_config(page_title="Microgrid Analysis", layout="wide")
 # Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv('Full Dataset (2).csv')
+    df = pd.read_csv('Full Dataset with months.csv')
     df['DateTime'] = pd.to_datetime(df['DateTime'])
     df['Month'] = df['DateTime'].dt.strftime('%B')
     return df
