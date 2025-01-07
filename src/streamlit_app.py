@@ -11,7 +11,7 @@ st.set_page_config(page_title="Microgrid Analysis Dashboard", layout="wide")
 @st.cache_data
 def load_data():
     # Read the CSV data and parse dates
-    df = pd.read_csv('Full Dataset with months.csv')
+    df = pd.read_csv('src/data/Full Dataset with months.csv')
     df['DateTime'] = pd.to_datetime(df['DateTime'])
     # Add hour and month columns for filtering
     df['Hour'] = df['DateTime'].dt.hour
